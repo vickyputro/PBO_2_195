@@ -5,9 +5,9 @@ public class Login {
         Scanner sc = new Scanner(System.in);
 
         // data
-        String lastThreeDigits = "195";
-        String usernameValid = "Admin" + lastThreeDigits;
-        String passwordValid = "password" + lastThreeDigits;
+        String lastDigit = "195";
+        String usernameValid = "Admin" + lastDigit;
+        String passwordValid = "password" + lastDigit;
         String namaMahasiswa = "Vicky Leo Cahyo Putro";
         String nomorMahasiwa = "202410370110195";
 
@@ -17,7 +17,7 @@ public class Login {
         System.out.println("2. Mahasiswa");
         System.out.print("Masukkan pilihan: ");
         int pilihan = sc.nextInt();
-        sc.nextLine();
+        sc.nextLine();//untuk menghilangkan newline
 
         if (pilihan == 1)
         {
@@ -26,7 +26,7 @@ public class Login {
             String username = sc.nextLine();
             System.out.print("Masukkan Password: ");
             String password = sc.nextLine();
-
+            // boolean untuk membandingkan
             if (username.equals(usernameValid) && password.equals(passwordValid)) {
                 System.out.println("Login Admin berhasil!");
             } else {
@@ -40,7 +40,7 @@ public class Login {
             String nama = sc.nextLine();
             System.out.print("Masukkan NIM: ");
             String nim = sc.nextLine();
-
+            // boolean untuk membandingkan
             if (nama.equals(namaMahasiswa) && nim.equals(nomorMahasiwa)) {
                 System.out.println("Login Mahasiswa berhasil!");
             } else {
